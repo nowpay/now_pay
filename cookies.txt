@@ -1,4 +1,4 @@
 # HTTrack Website Copier Cookie File
 # This file format is compatible with Netscape cookies
-www.qifengshuma.com	TRUE	/	FALSE	1999999999	PHPSESSID	1e9c0bd3d950b87b0fb4e09c1779efae
+nowpay.github.io/now_pay	TRUE	/	FALSE	1999999999	PHPSESSID	1e9c0bd3d950b87b0fb4e09c1779efae
 

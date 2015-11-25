@@ -1,7 +1,9 @@
 var recursive = require('recursive-readdir');
 var fs        = require('fs');
-var search    = process.argv[2];
-var replace   = process.argv[3];
+/*var search    = process.argv[2];
+var replace   = process.argv[3];*/
+var search = 'content="BageCMS CMS"';
+var replace = 'content="Wait"';
 console.log(process.argv);
 
 recursive('./', ['.git', '*.js', '*.css', '*.jpg', '*.png', '*.gif', '*.log'], function(err, files) {
