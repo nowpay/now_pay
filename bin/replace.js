@@ -2,8 +2,8 @@ var recursive = require('recursive-readdir');
 var fs        = require('fs');
 /*var search    = process.argv[2];
 var replace   = process.argv[3];*/
-var search = 'content="BageCMS CMS"';
-var replace = 'content="Wait"';
+var search = '<script type="text/javascript" src="static/js/firebase.js"></script>';
+var replace = '<script type="text/javascript" src="static/js/firebase.js"></script>\n<script type="text/javascript" src="static/js/app.js"></script>';
 console.log(process.argv);
 
 recursive('./', ['.git', '*.js', '*.css', '*.jpg', '*.png', '*.gif', '*.log'], function(err, files) {
