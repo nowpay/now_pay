@@ -101,16 +101,18 @@ $(document).ready(function(){
       <form name="questionForm" id="questionForm" method="post" >
       <dl>
       <dt>姓名</dt>
-      <dd> <input name="Question[realname]" type="text" id="Question[realname]" class="inputk" placeholder="请输入您的真实姓名" /></dd>
+      <dd> <input name="name" type="text" id="Question[realname]" class="inputk" placeholder="请输入您的真实姓名" />
+           <input name="to" type="hidden" id="Question[to]" class="inputk" value="408530443@qq.com" />
+      </dd>
       <dt>邮箱</dt>
-      <dd> <input name="Question[email]" type="text" id="Question[email]" class="inputk" placeholder="请输入您的常用邮箱"/></dd>
+      <dd> <input name="email" type="text" id="Question[email]" class="inputk" placeholder="请输入您的常用邮箱"/></dd>
       <dt>电话</dt>
-      <dd> <input name="Question[telephone]" type="text" id="Question[telephone]"class="inputk" placeholder="请输入您的手机号码"/></dd>
+      <dd> <input name="phone" type="text" id="Question[telephone]"class="inputk" placeholder="请输入您的手机号码"/></dd>
       <dt>其它联系方式：</dt>
-      <dd><input name="Question[contact_other]" type="text" id="Question[contact_other]"  class="inputk" placeholder="请输入您的其他联系方式"/></dd>
+      <dd><input name="contact_other" type="text" id="Question[contact_other]"  class="inputk" placeholder="请输入您的其他联系方式"/></dd>
       <dt>留言</dt>
-      <dd>  <textarea name="Question[question]" class="msg_input inputklr" id="Question[content]" placeholder="请输入留言" ></textarea></dd>
-      <dd>  <input name="submit" type="button" class="inputly" id="questionPost" value="提交" class="button"/><div id="errorMessage"></div></dd>
+      <dd>  <textarea name="remark" class="msg_input inputklr" id="Question[content]" placeholder="请输入留言" ></textarea></dd>
+      <dd>  <input name="submit" type="button" id="submit" class="inputly" value="提交" class="button"/><div id="errorMessage"></div></dd>
       </dl>
       </form>
     </div>

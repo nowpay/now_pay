@@ -25,6 +25,28 @@ function getUrlParams() {
       fb.child('artcle/'+id).update({views: views});
     });
   });
-
-
 })();
+(function() {
+  if(-1 === location.href.indexOf('index3fb2.html')) return;
+  $(function() {
+    $('#submit').on('click', function() {
+      var params = {};
+      $.each($('#questionForm').serializeArray(), function(_, kv) {
+        if(params.hasOwnProperty(kv.name)) {
+          params[kv.name] = $.makeArray[params[kv.name]];
+          params[kv.name].push(kv.value);
+        } else {
+          params[kv.name] = kv.value;
+        }
+      });
+      $.ajax('http://120.27.130.208:3000/email.json', {
+          data: JSON.stringify(params),
+          dataType: 'json',
+          type: 'POST',
+          success: function() {alert('发送成功');}
+        });
+      return false;
+    });
+  });
+})();
+
