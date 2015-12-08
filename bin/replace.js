@@ -2,8 +2,8 @@ var recursive = require('recursive-readdir');
 var fs        = require('fs');
 /*var search    = process.argv[2];
 var replace   = process.argv[3];*/
-var search = '<em id="_viewnum">.+?<\/em>';
-var replace = '<em id="_viewnum">0</em>';
+var search = '18933340759';
+var replace = '18933340759';
 console.log(process.argv);
 
 recursive('./', ['.git', '*.css', '*.jpg', '*.png', '*.gif', '*.log'], function(err, files) {
@@ -18,7 +18,7 @@ recursive('./', ['.git', '*.css', '*.jpg', '*.png', '*.gif', '*.log'], function(
         return;
       }
       var regexp = new RegExp(search, 'g');
-      if(-1==regexp.test(data)) return;
+      if(!regexp.test(data)) return;
       var temp = data.replace(regexp, replace);
       fs.writeFile(f, temp);
     });
